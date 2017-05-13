@@ -1,6 +1,16 @@
 {
   "name": "rails-js-view-demo",
   "private": true,
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "app/javascript/**/*.{js,jsx}"
+    ],
+    "coverageDirectory": "javascript-coverage",
+    "testRegex": "(/__tests__/.*|app/javascript/.*(\\.|/)(test|spec))\\.jsx?$"
+  },
   "dependencies": {
     "prop-types": "^15.5.8",
     "react": "^15.5.0",
@@ -12,15 +22,19 @@
   "devDependencies": {
     "autoprefixer": "^7.0.1",
     "babel-core": "^6.24.1",
+    "babel-jest": "^20.0.1",
     "babel-loader": "7.x",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.4.0",
     "babel-preset-react": "^6.24.1",
     "compression-webpack-plugin": "^0.4.0",
     "css-loader": "^0.28.1",
+    "enzyme": "^2.8.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "glob": "^7.1.1",
+    "jest": "^20.0.1",
+    "jest-cli": "^20.0.1",
     "js-yaml": "^3.8.4",
     "node-sass": "^4.5.2",
     "path-complete-extname": "^0.1.0",
@@ -28,6 +42,8 @@
     "postcss-smart-import": "^0.7.0",
     "precss": "^1.4.0",
     "rails-erb-loader": "^5.0.0",
+    "react-addons-test-utils": "^15.5.1",
+    "react-scripts": "^0.9.5",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
     "webpack": "^2.5.1",
