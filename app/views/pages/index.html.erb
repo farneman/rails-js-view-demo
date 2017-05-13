@@ -1,1 +1,10 @@
 <h1>Rails JS View Demo</h1>
+
+<hr />
+
+<div id="todos_root">JS only Todos</div>
+<%= javascript_pack_tag "todos" %>
+
+<hr />
+
+<%= react_component("todos", { subtitle: "rendered server-side by react-rails" }, { prerender: true }) %>
